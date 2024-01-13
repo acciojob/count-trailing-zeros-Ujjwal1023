@@ -1,6 +1,6 @@
-function trailingZeros(input) {
+function trailingZeros(n) {
   // Validate input
-  if (typeof input !== 'number' || input < 0 || input > 10000) {
+  if (typeof n !== 'number' || n < 0 || n> 10000) {
     alert("Invalid input. Please enter a non-negative integer up to 10000.");
     return;
   }
@@ -9,8 +9,8 @@ function trailingZeros(input) {
   let factorial = 1;
   let zerosCount = 0;
 
-  for (let i = 2; i <= input; i++) {
-    factorial *= i;
+  for (let i = 2; i <= n; i++) {
+    factorial *= i;;
   }
 
   while (factorial % 10 === 0) {
@@ -19,7 +19,7 @@ function trailingZeros(input) {
   }
 
   // Display the result
-  alert(`The number of trailing zeros in the factorial of ${input} is: ${zerosCount}`);
+  alert(`The number of trailing zeros in the factorial of ${n} is: ${zerosCount}`);
 }
 
 // Take input via prompt
